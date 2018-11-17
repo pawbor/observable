@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "checkJs": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*", "src/*/index"]
+    },
+    "lib": ["dom", "es2017"],
+    "strict": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src", "jsconfig"]
+}

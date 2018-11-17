@@ -1,0 +1,37 @@
+{
+  "name": "@pawbor/observable",
+  "version": "0.0.0",
+  "description": "Custom implementation of observable inspired by RxJS (https://github.com/ReactiveX/rxjs)",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "static": "tsc -p jsconfig.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "validate": "npm run lint && npm run static && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawbor/observable.git"
+  },
+  "keywords": [
+    "rxjs",
+    "observable"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pawbor/observable/issues"
+  },
+  "homepage": "https://github.com/pawbor/observable#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@types/jest": "^23.3.9",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.7.0",
+    "jest": "^23.6.0",
+    "typescript": "3.1.6"
+  }
+}
