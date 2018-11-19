@@ -1,4 +1,4 @@
-import { Maybe } from 'utils/fp';
+import Maybe from '@pawbor/maybe';
 
 import Observable from './observable';
 import { withoutElement } from 'utils/array';
@@ -41,7 +41,7 @@ class BufferedStream {
     const rootObservable = RootObservable(this);
     const rootObserver = RootObserver(this);
 
-    const bufferedValues = new Maybe(initialValues)
+    const bufferedValues = Maybe(initialValues)
       .map((values) => values.slice(-bufferSize))
       .getValue([]);
 

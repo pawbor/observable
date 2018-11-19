@@ -1,4 +1,5 @@
-import { noop, Maybe } from 'utils/fp';
+import Maybe from '@pawbor/maybe';
+import { noop } from 'utils/fp';
 
 /**
  * @template T
@@ -40,13 +41,13 @@ class Observer {
     if (typeof observerLike === 'function') {
       destinationNext = observerLike;
     } else if (observerLike) {
-      new Maybe(observerLike.next).do((next) => {
+      Maybe(observerLike.next).do((next) => {
         destinationNext = next;
       });
-      new Maybe(observerLike.error).do((error) => {
+      Maybe(observerLike.error).do((error) => {
         destinationError = error;
       });
-      new Maybe(observerLike.complete).do((complete) => {
+      Maybe(observerLike.complete).do((complete) => {
         destinationComplete = complete;
       });
     }
@@ -116,6 +117,5 @@ class Observer {
     });
   }
 }
-
 
 export default Observer;

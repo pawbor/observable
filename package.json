@@ -33,5 +33,8 @@
     "eslint": "^5.7.0",
     "jest": "^23.6.0",
     "typescript": "3.1.6"
+  },
+  "dependencies": {
+    "@pawbor/maybe": "0.0.0"
   }
 }
